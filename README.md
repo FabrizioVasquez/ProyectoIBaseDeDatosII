@@ -82,6 +82,16 @@ Resultado de consulta Busqueda por rangos
 
 ## Aspectos importantes de la implementación de dichas técnicas
 
+Sequential File
+- Se utiliza búsqueda binaria para obtener un registro en específico.
+- Los punteros durante una inserción se actualizan conforme al registro previo y al siguiente.
+
+Extendible Hashing
+
+- Se utiliza una función hash para asignar un valor binario a cada registro.
+- En nuestra implementación, cada bucket está representado como un archivo independiente.
+- para actualizar los Buckets, se reescribe por completo el archivo de index, para que queden registrado los Buckets actualizados.
+
 ## Video de uso de la aplicación
 
 
