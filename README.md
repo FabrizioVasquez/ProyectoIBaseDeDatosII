@@ -57,7 +57,25 @@ Se busca el valor binario donde pertenecería el key a buscar y dependiendo de e
 # Resultados Experimentales
 
 # Pruebas de uso de la aplicación
+Como incialmente se tenía previsto trabajar con QT creator para la parte de la interfaz gráfica del SGBD minimo, los retornos de las funciones de insercion y busqueda retornaban archivos .csv para que QT creator las mostrará al usuario; sin embargo no se logro vincular QT, ya que se no se reconocía los archivos generados por nuestro  programa por lo que se construyo de manera provisional un menu en la consola al ejecutar directamente archivo main.cpp.
 
+<div align="center"> 
+  <img src="img/SGDBMin.png" width="600">
+</div>
+
+Provisional
+
+Dataset basico
+<div align="center"> 
+  <img src="img/SGDBMin.png" width="600">
+</div>
+
+Menu provisional
+<div align="center"> 
+  <img src="img/SGDBMin.png" width="600">
+</div>
+
+Resultado de consulta Busqueda por rangos
 <div align="center"> 
   <img src="img/SGDBMin.png" width="600">
 </div>
