@@ -15,6 +15,15 @@
     - [Aspectos importantes de la implementación de dichas técnicas](#Aspectos importantes de la implementación de dichas técnicas)
     - [Pruebas de uso de la aplicación](#Pruebas de uso de la aplicación)
 
+- [Objetivos](#Objetivos)
+- [Programación Dinámica](#Programación-Dinámica)
+    - [Introducción a la Programación Dinámica](#Introducción-a-la-Programación-Dinámica)
+    - [Optimización de Fibonacci](#Optimización-de-Fibonacci)
+- [Caminos Aleatorios](#Caminos-Aleatorios)
+    - [¿Qué son los caminos aleatorios?](#¿Qué-son-los-caminos-aleatorios?)
+    - [Camino de Borrachos](#Camino-de-Borrachos)
+- [Programas Estocásticos](#Programas-Estocásticos)
+
 # Introducción
 
 ## Objetivos del proyecto
