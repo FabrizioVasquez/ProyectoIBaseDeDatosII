@@ -84,6 +84,7 @@ Resultado de consulta Busqueda por rangos
 
 Sequential File
 - Se utiliza búsqueda binaria para obtener un registro en específico.
+- En la busqueda por rango se usa como punto de partida de busqueda la primera key proporcionada por el usuario. 
 - Los punteros durante una inserción se actualizan conforme al registro previo y al siguiente.
 
 Extendible Hashing
