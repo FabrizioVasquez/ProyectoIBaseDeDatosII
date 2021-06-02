@@ -13,7 +13,7 @@
 - [Resultados Experimentales](#Resultados-Experimentales)
 - [Pruebas de uso de la aplicación](#Pruebas-de-uso-de-la-aplicación)
     - [Aspectos importantes de la implementación de dichas técnicas](#Aspectos-importantes-de-la-implementación-de-dichas-técnicas)
-    - [Pruebas de uso de la aplicación](#Pruebas-de-uso-de-la-aplicación)
+    - [Video de uso de la aplicación](#Video de uso de la aplicación)
 
 
 # Introducción
@@ -34,4 +34,6 @@
 
 ## Aspectos importantes de la implementación de dichas técnicas
 
-## Pruebas de uso de la aplicación
+## Video de uso de la aplicación
+
+
