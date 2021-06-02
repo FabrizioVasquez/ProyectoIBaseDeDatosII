@@ -5,7 +5,7 @@
 # Tabla de contenido
 
 - [Introducción](#Introducción)
-    - [Objetivo del proyecto](#Objetivo del proyecto)
+- [Objetivo del proyecto](#Objetivo del proyecto)
     - [Resultados que se esperan obtener](#Resultados que se esperan obtener)
 - [Fundamente y describa las técnicas](#Fundamente y describa las técnicas)
     - [Explicación procedimental del proceso de inserción, eliminacióny búsqueda](#Explicación procedimental del proceso de inserción, eliminacióny búsqueda)
