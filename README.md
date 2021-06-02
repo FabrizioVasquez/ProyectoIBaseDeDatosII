@@ -3,7 +3,7 @@
 </div>
 
 <div align="center"> 
-  <img src="img/SGDBMin.png" width="250">
+  <img src="img/SGDBMin.png" width="800">
 </div>
 
 # Tabla de contenido
