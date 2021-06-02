@@ -2,9 +2,6 @@
   <h1>Proyecto 1 - Base de datos II </h1>
 </div>
 
-<div align="center"> 
-  <img src="img/SGDBMin.png" width="800">
-</div>
 
 # Tabla de contenido
 
@@ -49,6 +46,10 @@ Extendible hashing es un hash dinámico que reduce y aumenta su tamaño dependie
 # Resultados Experimentales
 
 # Pruebas de uso de la aplicación
+
+<div align="center"> 
+  <img src="img/SGDBMin.png" width="600">
+</div>
 
 ## Aspectos importantes de la implementación de dichas técnicas
 
