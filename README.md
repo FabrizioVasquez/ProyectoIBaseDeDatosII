@@ -67,17 +67,17 @@ Provisional
 
 Dataset basico
 <div align="center"> 
-  <img src="img/SGDBMin.png" width="600">
+  <img src="img/dataProvisional.png" width="600">
 </div>
 
 Menu provisional
 <div align="center"> 
-  <img src="img/SGDBMin.png" width="600">
+  <img src="img/MenuProvisional.png" width="600">
 </div>
 
 Resultado de consulta Busqueda por rangos
 <div align="center"> 
-  <img src="img/SGDBMin.png" width="600">
+  <img src="img/rangeResult.png" width="600">
 </div>
 
 ## Aspectos importantes de la implementación de dichas técnicas
