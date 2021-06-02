@@ -2,6 +2,10 @@
   <h1>Proyecto 1 - Base de datos II </h1>
 </div>
 
+Integrantes
+- Jean Miraval
+- Fabrizio Vásquez
+- Mateo Noel
 
 # Tabla de contenido
 
