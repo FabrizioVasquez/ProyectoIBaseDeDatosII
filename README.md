@@ -3,6 +3,7 @@
 </div>
 
 # Tabla de contenido
+
 - [Introducción](#Introducción)
     - [Objetivo del proyecto](#Objetivo del proyecto)
     - [Resultados que se esperan obtener](#Resultados que se esperan obtener)
@@ -10,6 +11,26 @@
     - [Explicación procedimental del proceso de inserción, eliminacióny búsqueda](#Explicación procedimental del proceso de inserción, eliminacióny búsqueda)
     - [Aspectos importantes de la implementación de dichas técnicas](#Aspectos importantes de la implementación de dichas técnicas)
 - [Resultados Experimentales](#Resultados Experimentales)
-- [Pruebas de uso de la aplicación](#)
+- [Pruebas de uso de la aplicación](#Pruebas de uso de la aplicación)
     - [Aspectos importantes de la implementación de dichas técnicas](#Aspectos importantes de la implementación de dichas técnicas)
     - [Pruebas de uso de la aplicación](#Pruebas de uso de la aplicación)
+
+# Introducción
+
+## Objetivos del proyecto
+
+## Resultados que se esperan obtener
+
+## Fundamente y describa las técnicas
+
+## Explicación procedimental del proceso de inserción, eliminacióny búsqueda
+
+## Aspectos importantes de la implementación de dichas técnicas
+
+# Resultados Experimentales
+
+# Pruebas de uso de la aplicación
+
+## Aspectos importantes de la implementación de dichas técnicas
+
+## Pruebas de uso de la aplicación
