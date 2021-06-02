@@ -503,7 +503,7 @@ int main(){
                 {
                     int key;
                     cout<<"Por favor escriba la key (ID) del registro a buscar: ";cin>>key;
-
+                    directorioSequential.search(key);
                     cout<<"Gracias! Su archivo se encuentra insertado en el archivo dataSearch.csv";
                 }
                 if(optionSecuencial == 3)
