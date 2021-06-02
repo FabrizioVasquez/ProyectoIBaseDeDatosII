@@ -3,6 +3,7 @@
 #include <utility>
 #include<vector>
 #include<sstream>
+#include<ctime>
 using namespace std;
 
 
@@ -138,8 +139,8 @@ public:
     string writeAll(const string& filename)
     {
         try{
-            ofstream response(filename, std::ios::out | std::ios::app);
-            for(auto&i:records){
+            ofstream response(filename, std::ios::out | std::ios::trunc);
+            for(auto&i:this->records){
                 response  << i.id<<",";
                 response  << i.nombre<<",";
                 response  << i.ciclo;
@@ -154,7 +155,7 @@ public:
 
 
     // insert a record on final
-    void insert( XDT record)
+    std::vector<XDT> insert( XDT record)
     {
 
         std::sort(begin(records),end(records), criterion);
@@ -170,7 +171,7 @@ public:
         {
             positionVec++;
             if(it->id == record.id){
-                cout<<"Position: "<<positionVec<<endl;
+                //cout<<"Position: "<<positionVec<<endl;
                 previosData = records[positionVec-2];
                 nextData = records[positionVec];
             }
@@ -187,7 +188,7 @@ public:
         /*for(int i = positionVec-2 ; i < records.size(); i++){
             records[i].next += sizeof(XDT);
         }*/
-
+        return this->records;
     }
 
     void printAll()
@@ -382,8 +383,7 @@ public:
     {
         if(indexName == "SEQUENTIALFILE")
         {
-            indexSequentialFile->insert(record);
-            this->indexSequentialFile->writeRecords(this->indexSequentialFile->records,"dataInsert.csv");
+            indexSequentialFile->writeRecords(this->indexSequentialFile->insert(record),"dataInsert.csv");
         }
     }
 
@@ -423,17 +423,100 @@ int main(){
     Directory<Data,int> directorio("data.csv","SEQUENTIALFILE");
     Data data1(829,"yo",7);
     //directorio.readAll();
-    directorio.printAll();
+    //directorio.printAll();
     cout<<endl;
-    directorio.insert(data1);
+    //directorio.insert(data1);
     cout<<endl;
     //directorio.printAll();
     //directorio.writeAll("data3.csv");
     //cout<<endl;
-    directorio.searchByRange(400,850);// FUNCIONA CON LOS DATOS ENTREGADOS
+    //directorio.searchByRange(400,850);// FUNCIONA CON LOS DATOS ENTREGADOS
     //directorio.search(345); // Funciona y retorna y file con los valores entregados.
     //directorio.printAll();
+    string path;
+    size_t option;
+    cout<<"***********************************************************************"<<endl;
+    cout<<"***********************************************************************"<<endl;
+    cout<<"***********************************************************************"<<endl;
+    cout<<"******HOLA BIENVENIDO A SU SISTEMA GESTOR DE BASE DE DATOS MINIMO******"<<endl;
+    cout<<"***********************************************************************"<<endl;
+    cout<<"***********************************************************************"<<endl;
+    cout<<"***********************************************************************\n\n"<<endl;
+    cout<<"Escriba la ruta absoluta de su archivo a procesar: ";cin>>path;
+    if(path.size() < 20)
+    {
+        cout<<"Que tecnica de organización de archivo desea utilizar ?"<<endl;
+        cout<<"1. Secuential File"<<endl;
+        cout<<"2. Extendible Hashing"<<endl;
+        cout<<"3. No se que es eso (by default)"<<endl;
+        cout<<"Digite el numero de la opción: ";cin>>option;
+        if(option > 1 ) {
+            Directory<Data, int> directorioHash(path, "HASH");
+            int optionHash;
+            while(true) {
+                cout << "\nTenemos las siguientes operaciones disponibles: " << endl;
+                cout << "1.Inserción de un registro" << endl;
+                cout << "2.Busqueda individial de registro por key" << endl;
+                cout << "3.Busqueda por rangos dado dos keys" << endl;
+                cout << "-1. Salir" << endl;
+                cout << "Digite el numero de la opción: ";
+                cin >> optionHash;
+                if(optionHash == -1) break;
+                if(optionHash == 1)
+                {
 
+                }
+                if(optionHash == 2)
+                {
+
+                }
+                if(optionHash == 3)
+                {
+
+                }
+            }
+        }
+        else
+        {
+            Directory<Data,int> directorioSequential(path,"SEQUENTIALFILE");
+            int optionSecuencial;
+            while(true) {
+                cout << "\nTenemos las siguientes operaciones disponibles: " << endl;
+                cout << "1.Inserción de un registro" << endl;
+                cout << "2.Busqueda individial de registro por key" << endl;
+                cout << "3.Busqueda por rangos dado dos keys" << endl;
+                cout << "-1. Salir" << endl;
+                cout << "Digite el numero de la opción: ";
+                cin >> optionSecuencial;
+                if(optionSecuencial == -1) break;
+                if(optionSecuencial == 1)
+                {
+                    string ID,NOMBRE,CICLO;
+                    cout<<"Por favor escriba el ID del registro: "<<endl;cin>>ID;
+                    cout<<"Por favor escriba el NOMBRE del registro: "<<endl;cin>>NOMBRE;
+                    cout<<"Por favor escriba el ciclo del registro: "<<endl;cin>>CICLO;
+                    Data dato(stoi(ID),NOMBRE,stoi(CICLO));
+                    directorioSequential.insert(dato);
+                    cout<<"Gracias! Su archivo se encuentra insertado en el archivo dataInsert.csv";
+                }
+                if(optionSecuencial == 2)
+                {
+                    int key;
+                    cout<<"Por favor escriba la key (ID) del registro a buscar: ";cin>>key;
+
+                    cout<<"Gracias! Su archivo se encuentra insertado en el archivo dataSearch.csv";
+                }
+                if(optionSecuencial == 3)
+                {
+                    int start_key,end_key;
+                    cout<<"Por favor escriba el rango de la key (ID) del conjunto de registros a buscar: ";cin>>start_key;
+                    cout<<"Por favor escriba el rango de la key (ID) del conjunto de registros a buscar: ";cin>>end_key;
+                    directorioSequential.searchByRange(start_key,end_key);
+                    cout<<"Gracias! Su archivo se encuentra insertado en el archivo dataSearchByRange.csv";
+                }
+            }
+        }
+    }
 
     return 0;
 }
