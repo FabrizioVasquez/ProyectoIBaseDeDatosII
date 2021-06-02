@@ -231,11 +231,19 @@ public:
     std::vector<XDT> searchByRange(int start_key, int end_key)
     {
         std::vector<XDT> recordsByRange;
-        for(auto&item:records)
-        {
-            if(item.id > start_key && item.id < end_key)
-            {
-                recordsByRange.push_back(item);
+        auto pos = positionBefore(start_key);
+        if(pos != -1) {
+            for (int i = pos; i < records.size(); i++) {
+                if (records[i].id > start_key && records[i].id < end_key) {
+                    recordsByRange.push_back(records[i]);
+                }
+            }
+        }
+        else {
+            for (auto &item:records) {
+                if (item.id > start_key && item.id < end_key) {
+                    recordsByRange.push_back(item);
+                }
             }
         }
         return recordsByRange;
@@ -273,49 +281,7 @@ public:
 
     bool delete_(int pos)
     {
-        if (pos < 0 || pos > records.size()-1)
-            return false;
 
-        int alumnoSize = (int)sizeof(XDT);
-        int deletePosicion = pos * alumnoSize;
-        XDT temp1, temp2;
-
-        readRecord(this->fileSequential, temp1, deletePosicion);
-        if (temp1.next == 0)
-            return false;
-        if (pos == 0 || temp1.next == -1) {
-            temp1.next = 0;
-            writeRecord(this->fileSequential,temp1, 0, false);
-            return true;
-        }
-
-        // Encontrar Registro Previo
-        int posicionPrevia;
-        string Filename;
-        int alumnoPrevio = Search(stol(temp1.Dni)-1,true);
-
-        readRecord(this->fileSequential, temp2, alumnoPrevio*alumnoSize);
-        if (temp2.next > 0) {
-            Filename = this->fileSequential;
-            posicionPrevia = alumnoPrevio*alumnoSize;
-        } else {
-            posicionPrevia = -1*(temp2.next+alumnoSize);
-            readRecord(auxFile, temp2, -1*(temp2.next+alumnoSize));
-            while (temp2.next < 0) {
-                posicionPrevia = -1*(temp2.next+alumnoSize);
-                readRecord(auxFile, temp2, posicionPrevia);
-            }
-            Filename = auxFile;
-        }
-
-        // Sobreescribir Alumnos
-        if (temp2.next == deletePosicion) {
-            temp2.next = temp1.next;
-            temp1.next = 0;
-            writeRecord(this->fileSequential, temp1, deletePosicion, false);
-            writeRecord(Filename, temp2, posicionPrevia, false);
-            return true;
-        }
     }
 };
 
@@ -464,7 +430,7 @@ int main(){
     //directorio.printAll();
     //directorio.writeAll("data3.csv");
     //cout<<endl;
-    //directorio.searchByRange(400,850);// FUNCIONA CON LOS DATOS ENTREGADOS
+    directorio.searchByRange(400,850);// FUNCIONA CON LOS DATOS ENTREGADOS
     //directorio.search(345); // Funciona y retorna y file con los valores entregados.
     //directorio.printAll();
 
