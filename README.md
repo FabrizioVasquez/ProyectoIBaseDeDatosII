@@ -2,6 +2,10 @@
   <h1>Proyecto 1 - Base de datos II </h1>
 </div>
 
+<div align="center"> 
+  <img src="img/SGDBMin.png" width="250">
+</div>
+
 # Tabla de contenido
 
 - [Introducción](#Introducción)
