@@ -35,9 +35,13 @@ Integrantes
 - Conseguir un rendimiento promedio en la ejecución de las consultas.
 
 ## Fundamente y describa las técnicas
-Las técnicas utilizadas para estructurar la base de datos son SequentialFile y Extendible Hashing.
+Las técnicas utilizadas para estructurar la base de datos son Sequential File y Extendible Hashing.
 
-Extendible hashing es un hash dinámico que reduce y aumenta su tamaño dependiendo de que y cuantos valores hay dentro de este. La función hash genera una secuencia de bits,a partir de esta los registros se almacenan en buckets dependiendo del key.
+Sequantial file funciona a partir de dos archivos, uno en el que se guarda principalmente los registros y otro auxiliar. El archivo mantiene los registros ordenados a partir de un key.
+
+Extendible hashing es un hash dinámico que reduce y aumenta su tamaño dependiendo de que y cuantos valores hay dentro de este.
+La funcion hash genera una secuencia de bits, a partir de esta los registros se almacenan en buckets dependiendo del key.
+A medida de que la cantidad de registros incrementan, los Buckets y los dígitos del código Hash que identifican a cada Bucket se incrementan, a menos que se llegue a la profundidad global, momento en el que los Buckets se extienden a Buckets secundarios de overflow.
 
 ## Explicación procedimental del proceso de inserción, eliminacióny búsqueda
 Sequantial File
