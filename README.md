@@ -49,7 +49,7 @@ Sequantial File
 - Búsqueda: Se realiza una búsqueda binaria.
 
 Extendible hashing
-</p> Donde D es la profundidad global del índice.
+</p> Donde D es la profundidad global del índice. </p>
 - Inserción: Primero se localiza el bucket en donde se debe insertar. Si encontró bucket y no está lleno, inserta.  Si el bucket esta lleno, dividir el bucket, creando nuevos con mayor profundidad y reinsertar todos los registros que estaban en este bucket. Si no se puede incrementar la profundidad se produce desbordamiento de buckets. Por otro lado, si no encontró bucket, buscas el de profundidad local mínima, y si no hay, creas el bucket e insertas el elemento en este.
 
 - Búsqueda: Aplicar la función hash sobre la clave de búsqueda y obtener la secuencia D-bit. 
